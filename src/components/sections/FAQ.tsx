@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/24/outline'; // Updated import for v2
 
 const FAQ = () => {
+  const [openIndex, setOpenIndex] = useState(null); // To track the currently open question
+
   const faqs = [
     {
       question: "What is a smart helmet and how does it work?",
@@ -20,6 +23,10 @@ const FAQ = () => {
     }
   ];
 
+  const toggleAnswer = (index) => {
+    setOpenIndex(openIndex === index ? null : index); // Toggle the answer visibility
+  };
+
   return (
     <section id="faq" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -36,12 +43,19 @@ const FAQ = () => {
           <dl className="space-y-8">
             {faqs.map((faq, index) => (
               <div key={index} className="bg-white p-8 rounded-lg shadow-lg">
-                <dt className="text-lg font-medium text-gray-900 mb-4">
+                <dt className="text-lg font-medium text-gray-900 mb-4 flex items-center justify-between cursor-pointer" onClick={() => toggleAnswer(index)}>
                   {faq.question}
+                  {openIndex === index ? (
+                    <ChevronUpIcon className="h-5 w-5 text-gray-700" />
+                  ) : (
+                    <ChevronDownIcon className="h-5 w-5 text-gray-700" />
+                  )}
                 </dt>
-                <dd className="text-base text-gray-500">
-                  {faq.answer}
-                </dd>
+                {openIndex === index && (
+                  <dd className="text-base text-gray-700">
+                    {faq.answer}
+                  </dd>
+                )}
               </div>
             ))}
           </dl>

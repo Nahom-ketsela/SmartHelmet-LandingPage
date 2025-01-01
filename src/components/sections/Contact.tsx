@@ -1,9 +1,9 @@
 import React from 'react';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { MapPin, Globe, Building } from 'lucide-react'; // Added icons for Website and Institution
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section id="contact" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
@@ -15,23 +15,20 @@ const Contact = () => {
         </div>
 
         <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-12">
+          {/* Project Information */}
           <div>
             <h3 className="text-lg font-medium text-gray-900 mb-6">Project Information</h3>
             <div className="space-y-6">
+              {/* Website */}
               <div className="flex items-start">
-                <Mail className="h-6 w-6 text-yellow-600 mt-1" />
+                <Globe className="h-6 w-6 text-yellow-600 mt-1" />
                 <div className="ml-4">
-                  <p className="text-gray-900 font-medium">Email</p>
-                  <p className="text-gray-600">contact@smarthelmet.com</p>
+                  <p className="text-gray-900 font-medium">Website</p>
+                  <p className="text-gray-600"><a href='https://sites.google.com/view/ietp-96/home' className="hover:text-yellow-500 hover:underline">E-portofolio</a></p>
                 </div>
               </div>
-              <div className="flex items-start">
-                <Phone className="h-6 w-6 text-yellow-600 mt-1" />
-                <div className="ml-4">
-                  <p className="text-gray-900 font-medium">Phone</p>
-                  <p className="text-gray-600">+251 123 456 789</p>
-                </div>
-              </div>
+
+              {/* Location */}
               <div className="flex items-start">
                 <MapPin className="h-6 w-6 text-yellow-600 mt-1" />
                 <div className="ml-4">
@@ -39,10 +36,20 @@ const Contact = () => {
                   <p className="text-gray-600">Addis Ababa, Ethiopia</p>
                 </div>
               </div>
+
+              {/* Institution */}
+              <div className="flex items-start">
+                <Building className="h-6 w-6 text-yellow-600 mt-1" />
+                <div className="ml-4">
+                  <p className="text-gray-900 font-medium">Institution</p>
+                  <p className="text-gray-600">Addis Ababa Science and Technology University </p>
+                </div>
+              </div>
             </div>
           </div>
 
-          <form className="space-y-6">
+          {/* Contact Form */}
+          <form className="space-y-6 bg-white p-8 rounded-lg shadow-lg">
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-700">
                 Name
@@ -52,6 +59,7 @@ const Contact = () => {
                 name="name"
                 id="name"
                 className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-yellow-500 focus:ring-yellow-500"
+                placeholder="Your Full Name"
               />
             </div>
             <div>
@@ -63,6 +71,7 @@ const Contact = () => {
                 name="email"
                 id="email"
                 className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-yellow-500 focus:ring-yellow-500"
+                placeholder="Your Email Address"
               />
             </div>
             <div>
@@ -74,6 +83,7 @@ const Contact = () => {
                 name="message"
                 rows={4}
                 className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-yellow-500 focus:ring-yellow-500"
+                placeholder="Your Message..."
               />
             </div>
             <div>

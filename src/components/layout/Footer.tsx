@@ -30,7 +30,7 @@ const Footer = () => {
             <h3 className="text-white font-semibold mb-4 text-xl">Contact</h3>
             <ul className="space-y-2 text-gray-400">
               <li>Addis Ababa, Ethiopia</li>
-              <li><a href="https://sites.google.com/view/ietp-96/home" className="hover:text-yellow-500 hover:underline">Contact Info</a></li>
+              <li><a href="https://sites.google.com/view/ietp-96/home" className="hover:text-yellow-500 hover:underline">E-portofolio </a></li>
             </ul>
           </div>
         </div>
