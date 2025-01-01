@@ -10,7 +10,7 @@ const Dashboard = () => {
             Real-Time Monitoring Dashboard
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
-            Preview of our comprehensive monitoring system
+          The Real-Time Monitoring Dashboard displays key safety metrics, including heart rate, room temperature, air quality, and active alerts. It ensures the safety of workers by tracking vital signs, environmental conditions, and system status. Recent activity logs provide a detailed overview of system checks, worker location updates, and hazard scans, all ensuring a secure and efficient work environment.
           </p>
         </div>
 
@@ -28,10 +28,10 @@ const Dashboard = () => {
           {/* Temperature Card */}
           <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
             <div className="flex items-center justify-between mb-4">
-              <h3 className="text-lg font-medium">Body Temperature</h3>
+              <h3 className="text-lg font-medium">Room Temperature</h3>
               <Thermometer className="h-6 w-6 text-blue-500" />
             </div>
-            <div className="text-3xl font-bold text-gray-900">36.5°C</div>
+            <div className="text-3xl font-bold text-gray-900">25°C</div>
             <div className="text-sm text-gray-500 mt-2">Normal Range</div>
           </div>
 
